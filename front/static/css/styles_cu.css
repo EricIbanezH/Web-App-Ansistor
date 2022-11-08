@@ -1,0 +1,24 @@
+#carousel-item_cu {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+#img-carousel{
+  border-radius: 5%;
+}
+
+#img-carousel:hover{
+  background-image: url("../assets/img/image.png");
+  opacity: 0.5;
+}
+
+#foot_cu{
+  background-color: #212529;
+  background-image: url("../assets/img/map-image.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#circle_cu{
+  background-color: royalblue;
+}
