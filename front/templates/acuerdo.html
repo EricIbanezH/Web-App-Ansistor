@@ -1,0 +1,108 @@
+{% extends 'template.html' %}
+{% load static %}
+{% block styles %}
+        <style>
+            .bd-placeholder-img {
+              font-size: 1.125rem;
+              text-anchor: middle;
+              -webkit-user-select: none;
+              -moz-user-select: none;
+              user-select: none;
+            }
+      
+            @media (min-width: 768px) {
+              .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+              }
+            }
+      
+            .b-example-divider {
+              height: 3rem;
+              background-color: rgba(0, 0, 0, .1);
+              border: solid rgba(0, 0, 0, .15);
+              border-width: 1px 0;
+              box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+            }
+      
+            .b-example-vr {
+              flex-shrink: 0;
+              width: 1.5rem;
+              height: 100vh;
+            }
+      
+            .bi {
+              vertical-align: -.125em;
+              fill: currentColor;
+            }
+      
+            .nav-scroller {
+              position: relative;
+              z-index: 2;
+              height: 2.75rem;
+              overflow-y: hidden;
+            }
+      
+            .nav-scroller .nav {
+              display: flex;
+              flex-wrap: nowrap;
+              padding-bottom: 1rem;
+              margin-top: -1px;
+              overflow-x: auto;
+              text-align: center;
+              white-space: nowrap;
+              -webkit-overflow-scrolling: touch;
+            }
+          </style>
+{% endblock %}
+
+{% block content %}
+        <main>
+            <div class="container py-4">
+              
+              <div class="p-5 mb-4 bg-light rounded-3">
+                <div class="container-fluid py-5">
+                  <h1 class="display-5 fw-bold">Acuerdo de privacidad</h1>
+                  <p class="col-md-8"  style="text-align: justify;">
+                    Su privacidad es importante para nosotros. Esta declaración de privacidad explica cuáles
+                    son los datos personales que recopila Microsoft, cómo los trata y con qué fines lo hace.
+                    Microsoft ofrece una amplia gama de productos, entre los que se incluyen productos de servidor
+                    usados para ayudar a funcionar a empresas de todo el mundo, dispositivos de uso doméstico, 
+                    software que los estudiantes emplean en su centro educativo y desarrolladores de servicios, 
+                    cuya finalidad es crear y hospedar lo que está por venir. Entre las referencias a productos de 
+                    Microsoft usadas en esta declaración se encuentran los servicios, los sitios web, las aplicaciones, 
+                    el software, los servidores y los dispositivos de Microsoft.
+                  </p>
+                  <p class="col-md-8"  style="text-align: justify;">
+                    Consulte los detalles específicos de cada producto en esta declaración de privacidad, que ofrecen 
+                    información adicional relevante. Esta declaración se aplica a las interacciones de Microsoft con 
+                    usted y a los productos de Microsoft enumerados a continuación, así como a otros productos de 
+                    Microsoft en los que figure esta declaración.
+                    Es posible que los jóvenes prefieran empezar con la página Privacidad para los más jóvenes. En 
+                    esa página se resalta información que puede ser útil para la gente joven.
+                  </p>
+                </div>
+              </div>
+          
+              <div class="row align-items-md-stretch">
+                <div class="col-md-6">
+                  <div class="h-100 p-5 text-bg-dark rounded-3">
+                    <h2>Explora los terminos y condiciones</h2>
+                    <p style="text-align: justify;">
+                      Explora nuestros terminos y condiciones de uso de nuestra Web.
+                    </p>
+                    <a href="/terminos"><button class="btn btn-outline-light" type="button">quiero ir</button></a>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="h-100 p-5 bg-light border rounded-3">
+                    <h2>Explora acerca de nosotros</h2>
+                    <p style="text-align: justify;">
+                      Conoce mas acerca de nuestra empresa y nuestra mision, vision y valores.
+                    </p>
+                    <a href="/about"><button class="btn btn-outline-secondary" type="button">quiero ir</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+{% endblock  %}

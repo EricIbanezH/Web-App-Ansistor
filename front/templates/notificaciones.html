@@ -1,0 +1,93 @@
+{% extends 'template.html' %}
+{% load static %}
+{% block content %}
+        <div class="container-xl px-4 mt-4">
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="alert alert-{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        <hr class="mt-0 mb-4" />
+                        
+                        <div class="row">
+                            
+                            <div class="col-lg-8">
+                                {% for i in listaNoti %}
+                                {% if i.id_user == user %}
+                                <!-- Email notifications preferences card-->
+                                <div class="card card-header-actions mb-4">
+                                    <div class="card-header">
+                                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                            <form method="POST">
+                                            {% csrf_token %}
+                                            <input type="text" name="tipoPost" value="elimiar" hidden="" required="">
+                                            <input type="text" name="id_notificaciones" value="{{i.id_notificaciones}}" hidden="" required="">
+                                            <button class="w-10 btn btn-sm btn-danger" type="submit"> <img src="{% static 'assets/img/trash.png' %}" alt="img" width="20" height="20"> </button> 
+                                            </form>
+                                        </div>
+                                        {{i.title}}
+                                        <div class="form-check form-switch">
+                                            {% if i.state == 'read' %}
+                                            <form method="POST">
+                                            {% csrf_token %}
+                                            <input type="text" name="tipoPost" value="switch" hidden="" required="">
+                                            <input class="form-check-input" id="flexSwitchCheckChecked" type="checkbox" checked />
+                                            <label class="form-check-label" for="flexSwitchCheckChecked">Leido</label>
+                                            </form>
+                                            {% else %}
+                                            <form method="POST">
+                                            {% csrf_token %}
+                                            <input type="text" name="tipoPost" value="switch" hidden="" required="">
+                                            <input class="form-check-input" id="flexSwitchCheckChecked" type="checkbox" unchecked />
+                                            <label class="form-check-label" for="flexSwitchCheckChecked">No Leido</label>
+                                            </form>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <form>
+                                            <!-- Form Group (default email)-->
+                                            <div class="mb-3">
+                                                <label class="small mb-1" for="inputNotificationEmail">Remitente</label>
+                                                <input class="form-control" id="inputNotificationEmail" type="email" value="{{i.remitente}}" disabled />
+                                            </div>
+                                            <!-- Form Group (email updates checkboxes)-->
+                                            <div class="mb-0">
+                                                <label class="small mb-2">Contenido</label>
+                                                <p class="small mb-2">
+                                                    {{i.mensaje}}
+                                                </p>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                {% endif %}
+                                {% endfor %}
+                                <div>
+                                    <p> &nbsp</p><p> &nbsp</p><p> &nbsp</p><p> &nbsp</p><p> &nbsp</p><p> &nbsp</p><p> &nbsp</p>
+                                    <p> &nbsp</p><p> &nbsp</p>
+                                </div>
+                            </div>
+                        
+                            <div class="col-lg-4">
+                                <!-- Notifications preferences card-->
+                                <div class="card">
+                                    <div class="card-header">Configuracion de notificaciones</div>
+                                    <div class="card-body">
+                                        <form>
+                                            <!-- Form Group (notification preference checkboxes)-->
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input" id="checkAutoGroup" type="checkbox" checked />
+                                                <label class="form-check-label" for="checkAutoGroup">Recibir notiificaciones</label>
+                                            </div>
+                                            <!-- Submit button-->
+                                            <button class="btn btn-danger-soft text-danger">Eliminar todas las notificaciones</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+{% endblock  %}

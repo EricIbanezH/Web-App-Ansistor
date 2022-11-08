@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Ansistor</title>
+        <link href="{% static 'css/css-bootstrap/bootstrap.min.css' %}" rel="stylesheet" >
+        <link href="{% static 'css/styles_cu.css' %}" rel="stylesheet" >
+        <script src="{% static 'js/js-bootstrap/bootstrap.min.js' %}" ></script>
+        <script src="{% static 'js/js-bootstrap/bootstrap.bundle.min.js' %}" ></script>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="{% static 'assets/img/icon.png' %}" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+
+        {% block styles %}
+        {% endblock %}
+
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top"><img src="{% static 'assets/img/icon.png' %}" alt="img" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/productos">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/comunidad">Soporte y comunidad</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/about">Acerca de nosotros</a></li>
+                    </ul>
+                    <div class="dropdown text-end">
+                        <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle text-white" data-bs-toggle="dropdown" aria-expanded="false">
+                          <img src="{% static 'assets/img/user.png' %}" alt="mdo" width="32" height="32" class="rounded-circle">
+                        </a>
+                        <ul class="dropdown-menu text-small">
+                            {% if statusSession == False%}
+                                <li><a class="dropdown-item" href="/loggin">iniciar sesion</a></li>
+                            {% endif %}
+                            {% if statusSession == True%}
+                                <li><a class="dropdown-item" href="/perfil">Perfil</a></li>
+                            {% else %}
+                            <li><a class="dropdown-item" href="/loggin">Perfil</a></li>
+                            {% endif %}
+                          <li><a class="dropdown-item" href="/notificaciones">Notificaciones</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          {% if statusSession == True%}
+                            <li><a class="dropdown-item" href="/logout">cerrar sesion</a></li>
+                          {% endif %}
+                        </ul>
+                      </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead" style="background-image: url({% static 'assets/img/img.jpg' %});">
+            <div>
+                <div class="masthead-subheading">
+                </div>
+            </div>
+        </header>
+        
+        {% block content%}
+        {% endblock %}
+
+        <!-- Footer-->
+        <footer class="footer py-4" id="foot_cu">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start text-white">Copyright &copy; Ansistor 2022</div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a class="link-dark text-decoration-none me-3 text-white" href="/acuerdo">Politicas de privacidad</a>
+                        <a class="link-dark text-decoration-none text-white" href="/terminos">Terminos de uso</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Core theme JS-->
+        <script src="{% static 'js/scripts.js' %}"></script>
+        <script src="{% static 'js/js-bootstrap/sb-forms-0.4.1.js' %}"></script>
+        {% block scripts %}
+        {% endblock  %}
+    </body>
+</html>

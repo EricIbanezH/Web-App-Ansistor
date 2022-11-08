@@ -1,0 +1,101 @@
+{% extends 'template.html' %}
+{% load static %}
+{% block content %}
+        <!-- Services-->
+        <section class="page-section" id="services">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Servicios</h2>
+                    <h3 class="section-subheading text-muted">Conoce los servicios que tenemos para ti</h3>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-info"></i>
+                            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Productos de software</h4>
+                        <p class="text-muted">Adquiere las licencias de nuestros diferentes productos de software</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-info"></i>
+                            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Compatibilidad</h4>
+                        <p class="text-muted">Nuestros productos son aplicaciones web por lo que solo necesitas un navegador para usar los productos</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-info"></i>
+                            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Garantizamos la seguridad</h4>
+                        <p class="text-muted">Nuestros productos cuentas con alta tecnologia de seguridad para proteger tus datos y los de tu empresa</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About-->
+        <section class="page-section" id="about">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Logros</h2>
+                    <h3 class="section-subheading text-muted">Te compartimos algunos de nuetros logros como empresa</h3>
+                </div>
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'assets/img/about/1.jpg' %}" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>mayo 2022</h4>
+                                <h4 class="subheading">Creacion del primer producto de calidad</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Construimos nuestro primer producto de alta calidad enfocado en la administracion de tramites empresariales</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'assets/img/about/2.jpg' %}" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Agosto 2022</h4>
+                                <h4 class="subheading">certificaciones de calidad</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Nos certificamos con las ISO 25000 con nuestros procesos de desarrollo de software de calidad</p></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'assets/img/about/3.jpg' %}" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Septiembre 2022</h4>
+                                <h4 class="subheading">Excelentes equipos de trabajo</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Ser reconocidos por los ambientes de trabajo en equipo formidables y agradables</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="{% static 'assets/img/about/4.jpg' %}" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Octubre 2022</h4>
+                                <h4 class="subheading">Nos expandimos!</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Abrimos nuevos centros de trabajo en mas estados de la republica Mexicana</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image" id="circle_cu">
+                            <h4>
+                                Trabajando
+                                <br />
+                                en el
+                                <br />
+                                Siguiente logro!
+                            </h4>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+{% endblock %}

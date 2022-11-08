@@ -1,0 +1,105 @@
+{% extends 'template.html' %}
+{% load static %}
+{% block styles %}
+        <style>
+            .bd-placeholder-img {
+              font-size: 1.125rem;
+              text-anchor: middle;
+              -webkit-user-select: none;
+              -moz-user-select: none;
+              user-select: none;
+            }
+      
+            @media (min-width: 768px) {
+              .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+              }
+            }
+      
+            .b-example-divider {
+              height: 3rem;
+              background-color: rgba(0, 0, 0, .1);
+              border: solid rgba(0, 0, 0, .15);
+              border-width: 1px 0;
+              box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+            }
+      
+            .b-example-vr {
+              flex-shrink: 0;
+              width: 1.5rem;
+              height: 100vh;
+            }
+      
+            .bi {
+              vertical-align: -.125em;
+              fill: currentColor;
+            }
+      
+            .nav-scroller {
+              position: relative;
+              z-index: 2;
+              height: 2.75rem;
+              overflow-y: hidden;
+            }
+      
+            .nav-scroller .nav {
+              display: flex;
+              flex-wrap: nowrap;
+              padding-bottom: 1rem;
+              margin-top: -1px;
+              overflow-x: auto;
+              text-align: center;
+              white-space: nowrap;
+              -webkit-overflow-scrolling: touch;
+            }
+          </style>
+{% endblock %}     
+{% block content %}
+        <main>
+            <div class="container py-4">
+              
+              <div class="p-5 mb-4 bg-light rounded-3">
+                <div class="container-fluid py-5">
+                  <h1 class="display-5 fw-bold">Terminos y condiciones</h1>
+                  <p class="col-md-8" style="text-align: justify;">
+                    a. Cuando comparte Su Contenido con otras personas, usted comprende que quizá puedan, a nivel mundial, usar, guardar, grabar, reproducir, transmitir, compartir y mostrar Su Contenido con
+                    la finalidad para la cual puso Su Contenido a disposición en los Servicios, sin necesidad de ofrecerle compensación alguna. Si no desea que terceros tengan esa capacidad, no use los Servicios
+                    para compartir Su Contenido. Usted declara y garantiza que mientras estén vigentes los presentes Términos tiene (y tendrá) todos los derechos necesarios para Su Contenido cargado, almacenado o
+                    compartido en o a través de los Servicios y que la recopilación, el uso y la conservación de Su Contenido no infringirá ninguna ley ni derecho de otros. Microsoft no es propietario, no controla,
+                    no verifica, no paga, no avala ni asume responsabilidad legal alguna respecto de Su Contenido y, por ende, no será responsable de Su Contenido o del material que otros carguen, almacenen o compartan
+                    mediante el uso de los Servicios.
+                  </p>
+                  <p class="col-md-8" style="text-align: justify;">
+                    b. En la medida de lo necesario para proveerle los Servicios a usted y a otros, para protegerlo a usted y a los Servicios, y para mejorar los productos y servicios de Microsoft, usted le otorga a 
+                    Microsoft una licencia de propiedad intelectual a nivel mundial y sin el pago de regalías para usar Su Contenido, por ejemplo, para hacer copias, conservar, transmitir, dar nuevo formato, mostrar y 
+                    distribuir Su Contenido en los Servicios a través de herramientas de comunicación. Si usted publica Su Contenido en áreas del Servicio en el que esté disponible en línea sin restricciones, es posible
+                    que Su Contenido aparezca en demostraciones o materiales que promueven el Servicio. Algunos de los Servicios se sustentan con publicidad. Los controles sobre cómo Microsoft personaliza la publicidad 
+                    están disponibles en https://choice.live.com. No usamos lo que usted dice en correos electrónicos, chat, videollamadas o mensajes de voz, como tampoco sus documentos, fotos u otros archivos personales 
+                    para dirigir publicidad destinada a usted. Nuestra políticas de publicidad están cubiertas en detalle en la Declaración de Privacidad.
+                  </p>
+                </div>
+              </div>
+          
+              <div class="row align-items-md-stretch">
+                <div class="col-md-6">
+                  <div class="h-100 p-5 text-bg-dark rounded-3">
+                    <h2>Explora el acuerdo de privacidad</h2>
+                    <p>
+                       Conoce nuetro acuerdo de privacidad y ten conocimiento de como usamos los datos
+                    </p>
+                    <a href="/acuerdo"><button class="btn btn-outline-light" type="button">quiero ir</button></a>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="h-100 p-5 bg-light border rounded-3">
+                    <h2>Explora acerca de nosotros</h2>
+                    <p>
+                        Conoce mas acerca de nuestra empresa y nuestra mision, vision y valores.
+                    </p>
+                    <a href="/about"><button class="btn btn-outline-secondary" type="button">quiero ir</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+{% endblock %}

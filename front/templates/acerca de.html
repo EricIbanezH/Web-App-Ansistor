@@ -1,0 +1,79 @@
+{% extends 'template.html' %}
+{% load static %}
+{% block content %}
+        <br/>
+        <div class="container marketing">
+
+            <!-- Three columns of text below the carousel -->
+            <div class="row">
+              <div class="col-lg-4">
+                <img src="{% static 'assets/img/mision.jpg' %}" alt="img" class="bd-placeholder-img rounded-circle" width="140" height="140">
+                <h2 class="fw-normal">Mision</h2>
+                <p>Nuestra misión es empoderar a todas las personas y organizaciones del planeta para que puedan lograr más.</p>
+              </div><!-- /.col-lg-4 -->
+              <div class="col-lg-4">
+                <img src="{% static 'assets/img/vision.jpg' %}" alt="img" class="bd-placeholder-img rounded-circle" width="140" height="140">
+                <h2 class="fw-normal">Vision</h2>
+                <p>Creemos que la tecnología es una gran fuerza para el bien y estamos trabajando para promover el acceso a los beneficios y las oportunidades que crea la tecnología.</p>
+              </div><!-- /.col-lg-4 -->
+              <div class="col-lg-4">
+                <img src="{% static 'assets/img/valores.png' %}" alt="img" class="bd-placeholder-img rounded-circle" width="140" height="140">
+                <h2 class="fw-normal">Valores</h2>
+                <p>Innovación, Diversidad e inclusión, Responsabilidad social corporativa, IA, Informática de confianza</p>
+              </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
+            </div>
+
+            <div class="album py-5 bg-light">
+                <div class="container">
+            
+                  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="col">
+                      <div class="card shadow-sm">
+                        <img src="{% static 'assets/img/ab-1.jpg' %}" alt="img" class="bd-placeholder-img card-img-top" width="100%" height="225">
+            
+                        <div class="card-body">
+                          <p class="card-text" style="text-align: justify;">
+                            <h6>Fundadores</h6>
+                            Los miembros fundadores de la empresa Ansistor son estudiantes de la
+                            universidad TecNM campus queretaro sus nombres son: Eric Ibañez, Emmanuel
+                            lira, Gerardo Lopez.
+                          </p>                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                          <img src="{% static 'assets/img/ab-2.webp' %}" alt="img" class="bd-placeholder-img card-img-top" width="100%" height="225">
+              
+                          <div class="card-body">
+                            <p class="card-text" style="text-align: justify;">
+                              <h6>Crecimiento continuo</h6>
+                              Cada año las aplicaciones de Ansistor tienen un crecimiento de
+                              usuarios satisfactoria, nos sentimos orgullosos de que los esfuersos
+                              de nuestro equipo rindan frutos.
+                            </p>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card shadow-sm">
+                          <img src="{% static 'assets/img/ab-6.jpg' %}" alt="img" class="bd-placeholder-img card-img-top" width="100%" height="225">
+              
+                          <div class="card-body">
+                            <p class="card-text" style="text-align: justify;">
+                              <h6>Acciones contra COVID-19</h6>
+                              En nuestras instalaciones y oficinas aplicamos todas las
+                              medidas de salubridad recomendadas por los gobiernos para
+                              tener un ambiente seguro para nuestro equipo y seguir
+                              ofreciendoles servicios de calidad con la mayor seguridad you
+                              confianza posible
+                            </p>                            
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+{% endblock %}
